@@ -1,3 +1,3 @@
-module.exports = {
-  command: require('./lib/command')
-};
+const command = require('./lib/command');
+
+module.exports = {command};

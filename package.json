@@ -11,7 +11,7 @@
   "dependencies": {
     "bin-wrapper": "3.0.2",
     "minimist": "1.2.0",
-    "nexe": "^2.0.0-rc.30",
+    "pkg": "^4.3.3",
     "simple-spinner": "0.0.5"
   },
   "devDependencies": {
@@ -19,7 +19,7 @@
     "eslint-plugin-shopify": "22.1.0"
   },
   "scripts": {
-    "postinstall": "node ./lib/cli.js install logLevel=4",
+    "postinstall": "node ./lib/cli.js install --logLevel=3",
     "postversion": "node ./lib/cli.js install",
     "test": "node test/themekit-version",
     "lint": "npx eslint --max-warnings 0 -c .eslintrc.json lib/ test/"
