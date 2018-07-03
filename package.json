@@ -19,7 +19,7 @@
     "eslint-plugin-shopify": "22.1.0"
   },
   "scripts": {
-    "postinstall": "node ./lib/cli.js install --logLevel=3",
+    "postinstall": "node ./lib/cli.js install",
     "postversion": "node ./lib/cli.js install",
     "test": "node test/themekit-version",
     "lint": "npx eslint --max-warnings 0 -c .eslintrc.json lib/ test/"
