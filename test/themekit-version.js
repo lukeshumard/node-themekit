@@ -1,8 +1,8 @@
-var command = require('../lib/command');
+const command = require('../lib/command');
 
 command({
   args: ['version']
-}, function(err) {
+}, (err) => {
   if (err) {
     return;
   }
