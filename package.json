@@ -10,7 +10,7 @@
   "author": "Shopify Inc.",
   "dependencies": {
     "bin-wrapper": "3.0.2",
-    "minimist": "1.2.0",
+    "minimist": "^1.2.0",
     "pkg": "^4.3.3",
     "simple-spinner": "0.0.5"
   },
@@ -29,7 +29,8 @@
   },
   "themekit": {
     "version": "0.7.5",
-    "local": "true"
+    "local": "false",
+    "baseURL": "https://shopify-themekit.s3.amazonaws.com"
   },
   "keywords": [
     "themekit",
