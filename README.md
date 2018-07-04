@@ -15,6 +15,7 @@ Node version of [Theme Kit](http://shopify.github.io/themekit/).
 
 ```bash
 $ npm install @shopify/themekit
+$ yarn install @shopify/themekit
 ```
 
 ## Examples
@@ -30,11 +31,9 @@ For a complete list of commands and args: [shopify.github.io/themekit/commands](
 Print Theme Kit version info.
 
 ```javascript
-var command = require('@shopify/themekit').command;
+const ThemeKit = require('@shopify/themekit');
 
-command({
-  args: ['version']
-}, function(err) {
+ThemeKit(['version'], (err) => {
   if (err) {
     console.error(err);
     return;
@@ -49,18 +48,19 @@ command({
 Remove specific files from development environment.
 
 ```javascript
-var command = require('@shopify/themekit').command;
+const ThemeKit = require('@shopify/themekit');
 
-command({
-  args: ['remove', '--env', 'development', 'snippets/pagination.liquid', 'snippets/date.liquid']
-}, function(err) {
-  if (err) {
-    console.error(err);
-    return;
-  }
 
-  console.log('Theme Kit command has completed.');
-});
+ThemeKit(
+  ['remove', '--env', 'development', 'snippets/pagination.liquid', 'snippets/date.liquid'],
+    (err) => {
+      if (err) {
+        console.error(err);
+        return;
+      }
+
+    console.log('Theme Kit command has completed.');
+  });
 ```
 
 #### Example 3
@@ -68,11 +68,9 @@ command({
 Deploy all files to staging environment.
 
 ```javascript
-var command = require('@shopify/themekit').command;
+const ThemeKit = require('@shopify/themekit');
 
-command({
-  args: ['deploy', '--env', 'staging']
-}, function(err) {
+ThemeKit(['deploy', '--env', 'staging'], (err) => {
   if (err) {
     console.error(err);
     return;
