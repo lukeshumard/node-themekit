@@ -99,6 +99,10 @@
   dependencies:
     samsam "1.3.0"
 
+"@sinonjs/samsam@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@sinonjs/samsam/-/samsam-2.0.0.tgz#9163742ac35c12d3602dece74317643b35db6a80"
+
 acorn-jsx@^3.0.0:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/acorn-jsx/-/acorn-jsx-3.0.1.tgz#afdf9488fb1ecefc8348f6fb22f464e32a58b36b"
@@ -1155,9 +1159,9 @@ eslint-plugin-react@7.7.0:
     jsx-ast-utils "^2.0.1"
     prop-types "^15.6.0"
 
-eslint-plugin-shopify@22.1.0:
-  version "22.1.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-shopify/-/eslint-plugin-shopify-22.1.0.tgz#b8fb743bcce813e92cd1b813633b61d994781dd3"
+eslint-plugin-shopify@23.0.0:
+  version "23.0.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-shopify/-/eslint-plugin-shopify-23.0.0.tgz#3ea0dd7ba8ddfe59f4617af974e2a88ee07032b1"
   dependencies:
     babel-eslint "8.2.3"
     eslint-config-prettier "2.9.0"
@@ -1180,9 +1184,7 @@ eslint-plugin-shopify@22.1.0:
     merge "1.2.0"
     pascal-case "^2.0.1"
     pkg-dir "2.0.0"
-    typescript-eslint-parser "15.0.0"
-  optionalDependencies:
-    prettier "^1.12.1"
+    typescript-eslint-parser "16.0.1"
 
 eslint-plugin-sort-class-members@1.3.1:
   version "1.3.1"
@@ -1208,13 +1210,17 @@ eslint-scope@~3.7.1:
     esrecurse "^4.1.0"
     estraverse "^4.1.1"
 
+eslint-utils@^1.3.1:
+  version "1.3.1"
+  resolved "https://registry.yarnpkg.com/eslint-utils/-/eslint-utils-1.3.1.tgz#9a851ba89ee7c460346f97cf8939c7298827e512"
+
 eslint-visitor-keys@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/eslint-visitor-keys/-/eslint-visitor-keys-1.0.0.tgz#3f3180fb2e291017716acb4c9d6d5b5c34a6a81d"
 
-eslint@5.0.1:
-  version "5.0.1"
-  resolved "https://registry.yarnpkg.com/eslint/-/eslint-5.0.1.tgz#109b90ab7f7a736f54e0f341c8bb9d09777494c3"
+eslint@5.1.0:
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/eslint/-/eslint-5.1.0.tgz#2ed611f1ce163c0fb99e1e0cda5af8f662dff645"
   dependencies:
     ajv "^6.5.0"
     babel-code-frame "^6.26.0"
@@ -1223,6 +1229,7 @@ eslint@5.0.1:
     debug "^3.1.0"
     doctrine "^2.1.0"
     eslint-scope "^4.0.0"
+    eslint-utils "^1.3.1"
     eslint-visitor-keys "^1.0.0"
     espree "^4.0.0"
     esquery "^1.0.1"
@@ -1230,7 +1237,7 @@ eslint@5.0.1:
     file-entry-cache "^2.0.0"
     functional-red-black-tree "^1.0.1"
     glob "^7.1.2"
-    globals "^11.5.0"
+    globals "^11.7.0"
     ignore "^3.3.3"
     imurmurhash "^0.1.4"
     inquirer "^5.2.0"
@@ -1670,7 +1677,7 @@ glob@^5.0.3:
     once "^1.3.0"
     path-is-absolute "^1.0.0"
 
-globals@^11.1.0, globals@^11.5.0:
+globals@^11.1.0, globals@^11.7.0:
   version "11.7.0"
   resolved "https://registry.yarnpkg.com/globals/-/globals-11.7.0.tgz#a583faa43055b1aca771914bf68258e2fc125673"
 
@@ -3041,10 +3048,6 @@ preserve@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/preserve/-/preserve-0.2.0.tgz#815ed1f6ebc65926f865b310c0713bcb3315ce4b"
 
-prettier@^1.12.1:
-  version "1.13.7"
-  resolved "https://registry.yarnpkg.com/prettier/-/prettier-1.13.7.tgz#850f3b8af784a49a6ea2d2eaa7ed1428a34b7281"
-
 process-nextick-args@~2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/process-nextick-args/-/process-nextick-args-2.0.0.tgz#a37d732f4271b4ab1ad070d35508e8290788ffaa"
@@ -3387,11 +3390,12 @@ signal-exit@^3.0.0, signal-exit@^3.0.2:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/signal-exit/-/signal-exit-3.0.2.tgz#b5fdc08f1287ea1178628e415e25132b73646c6d"
 
-sinon@^6.1.0:
-  version "6.1.0"
-  resolved "https://registry.yarnpkg.com/sinon/-/sinon-6.1.0.tgz#9ee3d3900616333078464aa3969ba5688456fea3"
+sinon@^6.1.3:
+  version "6.1.3"
+  resolved "https://registry.yarnpkg.com/sinon/-/sinon-6.1.3.tgz#98e7d716b7b11f7f1200e9c997e74f50ae094660"
   dependencies:
     "@sinonjs/formatio" "^2.0.0"
+    "@sinonjs/samsam" "^2.0.0"
     diff "^3.5.0"
     lodash.get "^4.4.2"
     lolex "^2.4.2"
@@ -3808,9 +3812,9 @@ typedarray@^0.0.6:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
 
-typescript-eslint-parser@15.0.0:
-  version "15.0.0"
-  resolved "https://registry.yarnpkg.com/typescript-eslint-parser/-/typescript-eslint-parser-15.0.0.tgz#882fd3d7aabffbab0a7f98d2a59fb9a989c2b37f"
+typescript-eslint-parser@16.0.1:
+  version "16.0.1"
+  resolved "https://registry.yarnpkg.com/typescript-eslint-parser/-/typescript-eslint-parser-16.0.1.tgz#b40681c7043b222b9772748b700a000b241c031b"
   dependencies:
     lodash.unescape "4.0.1"
     semver "5.5.0"
