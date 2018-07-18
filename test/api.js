@@ -1,9 +1,9 @@
 const chai = require('chai');
-const sinon = require('sinon');
-const sinonChai = require('sinon-chai');
+// const sinon = require('sinon');
+// const sinonChai = require('sinon-chai');
 
 const {expect} = chai;
-chai.use(sinonChai);
+// chai.use(sinonChai);
 const API = require('../lib/api');
 
 describe('API', () => {
@@ -24,15 +24,9 @@ describe('API', () => {
     expect(argBlank).to.not.throw;
   });
 
-  it('Should execute callback', (done) => {
-    const apiCallback = sinon.spy();
-    const apiCall = API(['test-command'], apiCallback);
+  it('Should execute API command and callback', (done) => {
+    const apiCall = API(['test-command'], done);
     expect(apiCall).to.not.throw;
-    setTimeout(() => {
-      expect(apiCallback).to.have.been.calledOnce;
-      expect(apiCallback).to.have.been.calledWith();
-      done();
-    }, 50);
   });
 
 });
