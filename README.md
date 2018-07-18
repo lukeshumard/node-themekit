@@ -5,6 +5,7 @@ Node version of [Theme Kit](http://shopify.github.io/themekit/).
 ## Table Of Contents
 
 - [Installation](#installation)
+- [Options](#options)
 - [Examples](#examples)
 - [API](#api)
     + [`commands(options, callback)`](#themekitcommandsargs)
@@ -16,6 +17,24 @@ Node version of [Theme Kit](http://shopify.github.io/themekit/).
 ```bash
 $ npm install @shopify/themekit
 $ yarn install @shopify/themekit
+```
+
+## Options
+Theme Kit uses your project's `package.json` file to pass in options.
+
+```javascript
+{
+  "themekit": {
+    "version": "0.7.5",
+    // Version of Theme Kit binary to use
+
+    "local": false,
+    // If set to true, your local copy of Theme Kit instead of downloading binary
+
+    "baseURL": "https://shopify-themekit.s3.amazonaws.com",
+    // Location where to download Theme Kit binary from
+  }
+}
 ```
 
 ## Examples
@@ -97,17 +116,14 @@ Deploy theme to production via NPM scripts.
 
 ## API
 
-### `command(options, callback)`
+### `command(commands, callback)`
 
 Executes command with arguments using the Theme Kit binary.
 
-- options `<Object>`
-
+- commands `<Array>`  
   ```javascript
-  {
-    args: <Array>, // arguments to execute | ['version']
-    logLevel: <String> // Set level additional output info | 'silent', 'error', 'all', 'silly'
-  }
+  ['replace', '--env', 'staging']
+  // => theme replace --env staging
   ```
 
 - callback `<Function>`
