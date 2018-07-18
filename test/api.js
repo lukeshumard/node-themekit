@@ -1,9 +1,9 @@
 const chai = require('chai');
-// const sinon = require('sinon');
-// const sinonChai = require('sinon-chai');
+const sinon = require('sinon');
+const sinonChai = require('sinon-chai');
 
 const {expect} = chai;
-// chai.use(sinonChai);
+chai.use(sinonChai);
 const API = require('../lib/api');
 
 describe('API', () => {
@@ -26,6 +26,11 @@ describe('API', () => {
 
   it('Should execute API command and callback', (done) => {
     const apiCall = API(['test-command'], done);
+    expect(apiCall).to.not.throw;
+  });
+
+  it('Should be backwards compatible with command method', (done) => {
+    const apiCall = API.command(['test-command-stub'], done);
     expect(apiCall).to.not.throw;
   });
 
