@@ -12,7 +12,8 @@
     "bin-wrapper": "3.0.2",
     "minimist": "^1.2.0",
     "ora": "^2.1.0",
-    "pkg": "^4.3.3"
+    "pkg": "^4.3.3",
+    "sinon-chai": "^3.2.0"
   },
   "devDependencies": {
     "chai": "^4.1.2",
