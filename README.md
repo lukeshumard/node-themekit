@@ -8,7 +8,6 @@ Node version of [Theme Kit](http://shopify.github.io/themekit/).
 - [Options](#options)
 - [Examples](#examples)
 - [API](#api)
-    + [`commands(options, callback)`](#themekitcommandsargs)
 - [CLI](#cli)
 - [License](http://github.com/Shopify/node-themekit/blob/master/LICENSE.md)
 
@@ -116,25 +115,30 @@ Deploy theme to production via NPM scripts.
 
 ## API
 
-### `command(commands, callback)`
+```javascript
+const ThemeKit = require('@shopify/themekit');
+ThemeKit(commands, callback);
+
+// The method `command` is also available as an alias for backwards compatibility with this module
+ThemeKit.command(commands, callback);
+```
 
 Executes command with arguments using the Theme Kit binary.
 
 - commands `<Array>`  
+The `commands` array is a list of commands and flags to run. For a complete list of commands and args: [shopify.github.io/themekit/commands/](http://shopify.github.io/themekit/commands/).
   ```javascript
   ['replace', '--env', 'staging']
   // => theme replace --env staging
   ```
 
-- callback `<Function>`
-
+- callback `<Function>`  
+A callback function that runs once the commands have been run. This will pass an error message as an argument if an error occurs while running the commands.
   ```javascript
   function(error) {
 
   }
   ```
-
-For a complete list of commands and args: [shopify.github.io/themekit/commands/](http://shopify.github.io/themekit/commands/).
 
 ## CLI
 
