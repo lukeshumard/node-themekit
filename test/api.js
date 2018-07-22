@@ -15,11 +15,20 @@ describe('API', () => {
     expect(argObj).to.throw('API Commands is not an Array');
   });
 
-  it('Should only allow Function as callback', () => {
+  it('Should replace non-object options to blank object', () => {
     const argStr = () => { API(['test-command'], ''); };
-    const argObj = () => { API(['test-command'], {}); };
     const argBlank = () => { API(['test-command']); };
+    expect(argStr).to.not.throw;
+    expect(argBlank).to.not.throw;
+  });
+
+  it('Should only allow Function as callback', () => {
+    const argStr = () => { API(['test-command'], {}, ''); };
+    const argInt = () => { API(['test-command'], {}, 3); };
+    const argObj = () => { API(['test-command'], {}, {}); };
+    const argBlank = () => { API(['test-command'], {}); };
     expect(argStr).to.throw('API Callback is not a Function');
+    expect(argInt).to.throw('API Callback is not a Function');
     expect(argObj).to.throw('API Callback is not a Function');
     expect(argBlank).to.not.throw;
   });
@@ -30,7 +39,7 @@ describe('API', () => {
   });
 
   it('Should be backwards compatible with command method', (done) => {
-    const apiCall = API.command(['test-command-stub'], done);
+    const apiCall = API.command({args: ['test-command-stub']}, done);
     expect(apiCall).to.not.throw;
   });
 
