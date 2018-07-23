@@ -26,17 +26,17 @@ describe('Install - Local', () => {
     });
 
     it('Should not pass if blank command', () => {
-      const exists = checkLocal('');
+      const exists = checkLocal.exists('');
       expect(exists).to.be.false;
     });
 
     it('Should not pass if no command found', () => {
-      const exists = checkLocal('nf');
+      const exists = checkLocal.exists('nf');
       expect(exists).to.be.false;
     });
 
     it('Should pass if local version found', () => {
-      const exists = checkLocal('theme');
+      const exists = checkLocal.exists('theme');
       expect(exists).to.be.true;
     });
 
